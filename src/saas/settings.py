@@ -1,5 +1,4 @@
 from decouple import config
-
 """
 Django settings for saas project.
 
@@ -22,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-print(config('secret_key'))
+print(config)
 SECRET_KEY=config("secret_key",cast="string")
 
 
