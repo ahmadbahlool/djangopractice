@@ -3,7 +3,7 @@ from .models import PageVisits
 def homepage(request):
   path=request.build_absolute_uri()
   PageVisits.objects.create(page=request.path)
-
+  print(PageVisits.objects.all().count())
   context2={}
 
   context={
