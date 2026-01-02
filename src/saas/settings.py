@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+import os
 """
 Django settings for saas project.
 
@@ -23,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9m+i9fjqo+_xniua#i(=7qn*5slqj%%5zfsxpy#)*fy)u*&pz8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.getenv("debug"))
+print(DEBUG,type(DEBUG))
 
 
 ALLOWED_HOSTS = [".railway.app"]
