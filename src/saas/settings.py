@@ -27,10 +27,7 @@ SECRET_KEY=config("secret_key",cast="string")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("debug",cast=bool)
-
 print(DEBUG,type(DEBUG))
-
-
 ALLOWED_HOSTS = [".railway.app"]
 if DEBUG:
   ALLOWED_HOSTS.append("localhost")
